@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,33 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: NetflixSansRegular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/NetflixSansRegular.ttf);
+}
+@font-face {
+  font-family: NetflixSansBold;
+  font-style: normal;
+  font-weight: 500;
+  src: url(./assets/fonts/NetflixSansBold.ttf);
+}
+
+:root {
+  // Set the background of the entire app
+  --ion-background-color: #000;
+  // Set the default text color
+  --ion-text-color: #fff;
+  // Set the font family of the entire app
+  --ion-font-family: NetflixSansRegular;
+
+  h1,
+  h2,
+  h3 {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: NetflixSansBold;
+  }
+}
