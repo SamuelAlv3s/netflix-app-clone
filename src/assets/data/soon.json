@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Seinfeld",
+        "desc": "New York comedian Jerry and his friends offer up some hilarious dialogue in this show 'about nothing' that became one of the longest-running sitcoms.",
+        "date": "Coming October 1",
+        "tags": ["Sitcom", "Comedy", "Ensemble", "New York City", "Critically Acclaimed"],
+        "video": "http://devdactic.com/video/preview1.mp4"
+    },
+    {
+        "title": "Ronaldo",
+        "desc": "A portrait of famed Portugese soccer hero Cristiano Ronaldo charts his career and personal life, offering a glimpse of how he handles stardom.",
+        "date": "Coming October 1",
+        "tags": ["Inspiring", "Investigative", "Documentary", "Soccer", "Celebrities"],
+        "video": "http://devdactic.com/video/preview2.mp4"
+    },
+    {
+        "title": "The Billion Dollar Code",
+        "desc": "In 1990s Berlin, an artist and a hacker invented a new way to see the world. Years later, they reunite to sue Google for patent infringement on it.",
+        "date": "Season 1 Coming October 7",
+        "tags": ["Inspiring", "Investigative", "Documentary", "Soccer", "Celebrities"],
+        "video": "http://devdactic.com/video/preview3.mp4"
+    },
+    {
+        "title": "Seinfeld",
+        "desc": "New York comedian Jerry and his friends offer up some hilarious dialogue in this show 'about nothing' that became one of the longest-running sitcoms.",
+        "date": "Coming October 1",
+        "tags": ["Sitcom", "Comedy", "Ensemble", "New York City", "Critically Acclaimed"],
+        "video": "http://devdactic.com/video/preview1.mp4"
+    },
+    {
+        "title": "Ronaldo",
+        "desc": "A portrait of famed Portugese soccer hero Cristiano Ronaldo charts his career and personal life, offering a glimpse of how he handles stardom.",
+        "date": "Coming October 1",
+        "tags": ["Inspiring", "Investigative", "Documentary", "Soccer", "Celebrities"],
+        "video": "http://devdactic.com/video/preview2.mp4"
+    },
+    {
+        "title": "The Billion Dollar Code",
+        "desc": "In 1990s Berlin, an artist and a hacker invented a new way to see the world. Years later, they reunite to sue Google for patent infringement on it.",
+        "date": "Season 1 Coming October 7",
+        "tags": ["Inspiring", "Investigative", "Documentary", "Soccer", "Celebrities"],
+        "video": "http://devdactic.com/video/preview3.mp4"
+    }
+]

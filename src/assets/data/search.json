@@ -1,0 +1,57 @@
+[
+    {
+        "id": 2,
+        "title": "Lupin",
+        "img": "./assets/data/series-2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Money Heist",
+        "img": "./assets/data/series-3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Modern Family",
+        "img": "./assets/data/series-4.png"
+    },
+    {
+        "id": 5,
+        "title": "Dark",
+        "img": "./assets/data/series-5.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Breaking Bad",
+        "img": "./assets/data/series-6.jpg"
+    },
+    {
+        "id": 7,
+        "title": "How I met your mother",
+        "img": "./assets/data/series-7.jpg"
+    },
+    {
+        "id": 8,
+        "title": "The Big Bang Theory",
+        "img": "./assets/data/series-8.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Blacklist",
+        "img": "./assets/data/series-9.png"
+    },
+    {
+        "id": 10,
+        "title": "New Girl",
+        "img": "./assets/data/series-10.png"
+    },
+    {
+        "id": 11,
+        "title": "Better Call Saul",
+        "img": "./assets/data/series-11.png"
+    },
+    {
+        "id": 12,
+        "title": "Narcos",
+        "img": "./assets/data/series-12.png"
+    }
+]

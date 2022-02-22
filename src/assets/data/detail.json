@@ -1,0 +1,41 @@
+{
+    "title": "The Big Bang Theory",
+    "desc": "Physicists Leonard and Sheldon find their nerd-centric social circle with pals Howard and Raj expanding when aspiring actress Penny moves in next door.",
+    "match": 97,
+    "cast": ["Johnny Galecki", "Jim Parsons", "Kaley Cuoco"],
+    "spotlight": "./assets/data/detail-preview.mp4",
+    "year": 2018,
+    "seasons": 12,
+    "episodes": [
+        {
+            "id": 1,
+            "title": "Pilot",
+            "duration": "22m",
+            "desc": "When a pretty girl named Penny moves across the hall, socially awkward scientist Leonard is instantly smitten, much to roommate Sheldon's dismay."
+        },
+        {
+            "id": 2,
+            "title": "The Big Bran Hypothesis",
+            "duration": "21m",
+            "desc": "Leonard offers to receive a package on Penny's behalf, but things go awry when Sheldon feels the need to clean her apartment."
+        },
+        {
+            "id": 3,
+            "title": "The Fuzzy Boots Corollary",
+            "duration": "21m",
+            "desc": "Leonard is devastated when he sees Penny kissing another man, and he asks her out on a date under the guise of a group dinner with the guys."
+        },
+        {
+            "id": 4,
+            "title": "The Luminous Fish Effect",
+            "duration": "20m",
+            "desc": "Leonard calls in Sheldon's mother when Sheldon becomes obsessed with weaving ponchos and illuminating fish after being fired from his job."
+        },
+        {
+            "id": 5,
+            "title": "The Hamburger Postulate",
+            "duration": "20m",
+            "desc": "After agreeing to a sexual encounter with Leslie, Leonard becomes upset when he learns she was only interested in him as a one-night stand."
+        }
+    ]
+}
