@@ -1,9 +1,34 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>intro</ion-title>
+    <img src="./assets/img/logo-text.png" class="logo" />
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">Help</ion-button>
+      <ion-button fill="clear" color="light">Privacy</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content fullscreen="true" scrollY="false">
+  <div class="bg" #bg></div>
+  <swiper #swiper [config]="config" id="introswiper">
+    <ng-template swiperSlide>
+      <h1>Trying to join Netflix?</h1>
+      <p>
+        You can't sign up for Netflix in the app. We know it's a hassle. After
+        you're a ember, you can start watching in the app.
+      </p>
+    </ng-template>
+    <ng-template swiperSlide *ngFor="let page of pages">
+      <div class="intro-page"></div>
+      <img [src]="page.img" />
+      <h1>{{ page.title }}</h1>
+      <p>{{page.text }}</p>
+    </ng-template>
+  </swiper>
 </ion-content>
+<ion-footer>
+  <ion-toolbar class="ion-margin-bottom">
+    <ion-button expand="full" color="primary" routerLink="/login">
+      SIGN IN
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

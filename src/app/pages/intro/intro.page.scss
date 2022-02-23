@@ -1,0 +1,78 @@
+ion-toolbar {
+  --background: transparent;
+}
+
+.logo {
+  width: 100px;
+  padding-left: 10px;
+}
+
+ion-buttons > ion-button {
+  font-family: NetflixSansBold;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.69) 0%,
+      rgba(0, 0, 0, 0.65) 39%,
+      rgba(0, 0, 0, 0) 64%,
+      rgba(0, 0, 0, 0.54) 95%,
+      rgba(0, 0, 0, 0.72) 100%
+    ),
+    url("../../../assets/img/intro1.jpeg") no-repeat center center / cover;
+}
+
+#introswiper.swiper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+#introswiper > .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  text-align: center;
+  p {
+    margin-top: 20px;
+    font-size: large;
+  }
+  &:first-child {
+    margin-top: 50px;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--ion-color-primary);
+}
+
+.swiper-pagination-bullets {
+  bottom: calc(80px + var(--ion-safe-area-bottom)) !important;
+}
+
+.intro-page {
+  height: 200vh;
+  width: 100%;
+  position: absolute;
+  background: #000;
+  z-index: -1;
+}
+
+ion-footer > ion-toolbar {
+  --padding-start: 15px;
+  --padding-end: 15px;
+}
