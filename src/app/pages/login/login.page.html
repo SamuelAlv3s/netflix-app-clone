@@ -1,9 +1,56 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="" light></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="./assets/img/logo-text.png" class="logo" />
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">Help</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true" scrollY="false">
+  <div class="login">
+    <ion-item lines="none">
+      <ion-input
+        [(ngModel)]="email"
+        placeholder="Email or phone number"
+      ></ion-input>
+    </ion-item>
 
+    <ion-item lines="none">
+      <ion-input
+        [(ngModel)]="pw"
+        [type]="showPassword? 'text' : 'password'"
+        placeholder="Password"
+      ></ion-input>
+      <p class="pw-toggle" slot="end" (click)="showPassword = !showPassword">
+        {{showPassword? 'HIDE' : 'SHOW'}}
+      </p>
+    </ion-item>
+
+    <ion-button
+      expand="block"
+      class="login-btn"
+      [class.login-valid]="email !== '' && pw !== ''"
+      routerLink="/tabs"
+      routerDirection="root"
+      >Sign In</ion-button
+    >
+    <ion-button
+      expand="full"
+      fill="clear"
+      size="small"
+      color="light"
+      class="ion-margin-top"
+      >Recover Password</ion-button
+    >
+
+    <p class="ion-text-center">
+      Sign in is protected by Google reCAPTCHA to ensure you're not a bot.
+    </p>
+  </div>
 </ion-content>

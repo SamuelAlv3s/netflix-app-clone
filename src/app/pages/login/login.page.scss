@@ -1,0 +1,41 @@
+.logo {
+  width: 100px;
+}
+ion-content {
+  --background: #131413;
+}
+ion-toolbar {
+  --background: transparent;
+}
+ion-buttons > ion-button {
+  font-family: NetflixSansBold;
+}
+
+.login {
+  padding: 50px;
+  margin-top: 55%;
+  ion-item {
+    --background: #2d282d;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    p {
+      opacity: 0.5;
+      font-size: 13px;
+    }
+  }
+  ion-button {
+    font-family: NetflixSansBold;
+  }
+  .login-btn {
+    border: 1px solid var(--ion-color-dark);
+    border-radius: 6px;
+    --background: #131413;
+  }
+  .login-valid {
+    --background: var(--ion-color-primary);
+  }
+  p {
+    opacity: 0.8;
+    font-size: 14px;
+  }
+}
