@@ -1,9 +1,105 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <img class="logo" src="./assets/data/logo.png" />
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">
+        <ion-icon name="logo-rss"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <img class="logo" src="./assets/img/account.png" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-row class="ion-justify-content-center ion-text-center category-row">
+      <ion-col size="4" class="ion-text-right"> TV Shows </ion-col>
+      <ion-col size="4"> Movies </ion-col>
+      <ion-col
+        size="4"
+        tappable
+        (click)="openCategories()"
+        class="ion-text-left"
+      >
+        Categories <ion-icon name="caret-down-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+  <div
+    class="spotlight"
+    [style.background-image]="'url(./assets/data/'+spotlight.id+'-cover.jpg)'"
+  >
+    <!-- Overlay for the spotlight image -->
+    <div class="gradient"></div>
+    <div class="info">
+      <!-- actual spotlight image -->
+      <img [src]="'./assets/data/'+spotlight.id+'-title.png'" />
+      <span class="rating">{{ spotlight.rating }}</span>
+      <!-- button row floating above the image -->
+      <ion-row class="ion-align-items-center">
+        <ion-col size="4" class="ion-tex-center">
+          <div class="btn-vertical">
+            <ion-icon name="add"></ion-icon>
+            <span>My List</span>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="ion-tex-center">
+          <div class="btn-play">
+            <ion-icon name="play" color="dark"></ion-icon>
+            <span>Play</span>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="ion-tex-center">
+          <div class="btn-vertical">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>Info</span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
 
+  <div *ngFor="let section of sections" class="ion-padding">
+    <h3 class="section-title">{{ section.title }}</h3>
+
+    <swiper [config]="config" #swiper>
+      <ng-template swiperSlide *ngFor="let series of section.series">
+        <!-- Normal images for originals and trending -->
+        <img
+          *ngIf="section.type !== 'continue'"
+          [src]="'./assets/data/'+section.type+'-'+series.id+'.jpg'"
+        />
+
+        <!-- custom visuals for the continue section with controls -->
+        <div class="continue" *ngIf="section.type === 'continue'">
+          <img [src]="'./assets/data/'+section.type+'-'+series.id+'.jpg'" />
+          <div class="progress-bar">
+            <div class="progress" [style.width]="series.progress +'%'"></div>
+          </div>
+        </div>
+
+        <ion-row class="ion-no-padding">
+          <ion-col size="6" class="ion-text-left ion-no-padding">
+            <ion-button fill="clear" color="medium" size="small">
+              <ion-icon
+                name="information-circle-outline"
+                slot="icon-only"
+              ></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="6" class="ion-text-right ion-no-padding">
+            <ion-button
+              fill="clear"
+              (click)="openInfo(series)"
+              color="medium"
+              size="small"
+            >
+              <ion-icon name="ellipsis-vertical" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ng-template>
+    </swiper>
+  </div>
 </ion-content>

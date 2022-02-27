@@ -1,4 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  AfterContentChecked,
+  Component,
+  OnInit,
+  QueryList,
+  ViewChildren,
+  ViewEncapsulation,
+} from '@angular/core';
+import { SwiperComponent } from 'swiper/angular';
 import homeData from '../../../assets/data/home.json';
 
 @Component({
@@ -7,7 +15,8 @@ import homeData from '../../../assets/data/home.json';
   styleUrls: ['./home.page.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, AfterContentChecked {
+  @ViewChildren('swiper') swiperList: QueryList<SwiperComponent>;
   sections = homeData.sections;
   spotlight = homeData.spotlight;
 
@@ -19,6 +28,14 @@ export class HomePage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  ngAfterContentChecked() {
+    if (this.swiperList) {
+      this.swiperList.forEach((swiper) => {
+        swiper.updateSwiper({});
+      });
+    }
+  }
 
   async openCategories() {}
 
