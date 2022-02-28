@@ -56,3 +56,13 @@
     font-family: NetflixSansBold;
   }
 }
+
+.transparent-modal {
+  --background: #0000005c;
+  &::part(content) {
+    backdrop-filter: blur(12px);
+  }
+  ion-content {
+    --background: transparent;
+  }
+}

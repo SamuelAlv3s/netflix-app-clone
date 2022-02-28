@@ -6,8 +6,14 @@ import {
   ViewChildren,
   ViewEncapsulation,
 } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { SwiperComponent } from 'swiper/angular';
 import homeData from '../../../assets/data/home.json';
+import {
+  modalEnterAnimation,
+  modalLeaveAnimation,
+} from '../../modal-animation';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +31,7 @@ export class HomePage implements OnInit, AfterContentChecked {
     spaceBetween: 10,
     freeMode: true,
   };
-  constructor() {}
+  constructor(private modalCtrl: ModalController) {}
 
   ngOnInit() {}
 
@@ -37,7 +43,15 @@ export class HomePage implements OnInit, AfterContentChecked {
     }
   }
 
-  async openCategories() {}
+  async openCategories() {
+    const modal = await this.modalCtrl.create({
+      component: ModalPage,
+      cssClass: 'transparent-modal',
+      enterAnimation: modalEnterAnimation,
+      leaveAnimation: modalLeaveAnimation,
+    });
+    await modal.present();
+  }
 
   openInfo(series) {}
 }
