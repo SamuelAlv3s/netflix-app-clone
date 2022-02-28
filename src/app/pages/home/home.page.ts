@@ -13,6 +13,7 @@ import {
   modalEnterAnimation,
   modalLeaveAnimation,
 } from '../../modal-animation';
+import { InfoModalPage } from '../info-modal/info-modal.page';
 import { ModalPage } from '../modal/modal.page';
 
 @Component({
@@ -53,5 +54,13 @@ export class HomePage implements OnInit, AfterContentChecked {
     await modal.present();
   }
 
-  openInfo(series) {}
+  async openInfo(series) {
+    const modal = await this.modalCtrl.create({
+      component: InfoModalPage,
+      componentProps: { series },
+      breakpoints: [0, 0.4],
+      initialBreakpoint: 0.4,
+    });
+    await modal.present();
+  }
 }
