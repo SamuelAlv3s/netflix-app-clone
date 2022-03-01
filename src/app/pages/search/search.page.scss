@@ -1,0 +1,81 @@
+ion-toolbar {
+  --background: var(--ion-color-dark);
+}
+.search {
+  display: flex;
+  align-items: center;
+  ion-input {
+    --padding-start: 30px;
+    --background: #2c272c;
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 34px;
+  }
+}
+.has-search-value {
+  text-indent: 0;
+  transition: text-indent 400ms linear;
+  ion-icon {
+    margin-left: 2vw;
+    position: absolute;
+    opacity: 0.5;
+    transition: 0.4s;
+  }
+}
+.no-search-value {
+  text-indent: 35vw;
+  ion-icon {
+    margin-left: 35vw;
+    position: absolute;
+    opacity: 0.5;
+    transition: 0.4s;
+  }
+}
+
+.active-search {
+  display: flex;
+  flex: 0.8;
+  transition: 0.4s;
+}
+.inactive-search {
+  display: flex;
+  flex: 1;
+  transition: 0.4s;
+}
+.hidden-btn {
+  position: absolute;
+  top: 5px;
+  right: -100px;
+  transition: 0.4s;
+}
+.visible-btn {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  transition: 0.4s;
+}
+
+.top-search {
+  margin-bottom: 4px;
+  img {
+    width: 130px;
+    border-radius: 4px;
+  }
+  ion-icon {
+    font-size: 32px;
+  }
+  ion-label {
+    font-size: small;
+    font-weight: 600;
+  }
+}
+ion-item::part(native) {
+  padding-inline-start: 12px;
+}
+ion-list-header {
+  font-family: NetflixSansBold;
+  --color: var(--ion-color-light);
+  padding-inline-start: 12px;
+  font-size: large;
+}

@@ -1,9 +1,48 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>search</ion-title>
+    <div class="search">
+      <ion-input
+        #searchinput
+        placeholder="Search"
+        [(ngModel)]="search"
+        (ionChange)="filterResults()"
+        (ionFocus)="searching = true;"
+        (ionBlur)="searching = false;"
+        [class.active-search]="searching"
+        [class.inactive-search]="!searching"
+        [ngClass]="{'has-search-value': (search !== '' || searching),
+  'no-search-value': (search === '' && !searching)}"
+      >
+        <ion-icon name="search"></ion-icon>
+      </ion-input>
+      <ion-button
+        fill="clear"
+        color="light"
+        size="small"
+        (click)="searching = false;"
+        [ngClass]="{'visible-btn': searching, 'hidden-btn': !searching}"
+      >
+        Cancel
+      </ion-button>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content scrollEvents="true" (ionScroll)="blurSearch()">
+  <ion-list *ngIf="search === ''" lines="none">
+    <ion-list-header>Top Searches</ion-list-header>
+    <ion-item *ngFor="let block of searchData" class="top-search">
+      <img [src]="block.img" slot="start" />
+      <ion-label> {{ block.title }} </ion-label>
+      <ion-icon slot="end" name="play-circle-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="search !== ''" lines="none">
+    <ion-list-header>Movies & Tv</ion-list-header>
+    <ion-row>
+      <ion-col size="4" *ngFor="let block of searchData" class="cover-search">
+        <img [src]="block.img" />
+      </ion-col>
+    </ion-row>
+  </ion-list>
 </ion-content>
