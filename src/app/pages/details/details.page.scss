@@ -12,17 +12,18 @@ ion-toolbar {
   left: 0;
   top: 56px;
   width: 100%;
-  height: 180px;
   background: #000;
   z-index: 10;
 }
 
 video {
   width: 100%;
+  height: 220px;
+  max-height: 220px;
 }
 
 ion-content {
-  --padding-top: 236px;
+  --padding-top: 286px;
 }
 
 .spotlight-btn {
