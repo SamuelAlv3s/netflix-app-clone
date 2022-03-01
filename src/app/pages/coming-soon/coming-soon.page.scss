@@ -1,0 +1,52 @@
+.img-account {
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+ion-title {
+  font-family: NetflixSansBold;
+  font-size: x-large;
+}
+video {
+  width: 100%;
+}
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: small;
+  ion-icon {
+    font-size: 24px;
+  }
+}
+.desc {
+  padding-left: 15px;
+  padding-right: 15px;
+  p {
+    color: var(--ion-color-medium);
+  }
+  b {
+    font-size: larger;
+  }
+}
+ion-row {
+  margin-bottom: 20px;
+}
+
+.tag:not(:last-child):after {
+  background-color: var(--ion-color-primary);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  content: "";
+  margin-left: 4px;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inactive {
+  opacity: 0.3;
+  transition: 0.3s;
+}

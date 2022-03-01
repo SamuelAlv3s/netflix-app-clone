@@ -1,9 +1,49 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>comingSoon</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title mode="md">Coming Soon</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">
+        <ion-icon name="logo-rss"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <img class="img-account" src="./assets/img/account.png" />
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content scrollEvents="true" (ionScroll)="contentScrolled($event)">
+  <ion-item lines="none">
+    <ion-icon slot="start" name="notifications-outline"></ion-icon>
+    <ion-label>Notifications</ion-label>
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-row
+    *ngFor="let block of soon; let i = index"
+    [class.inactive]="i !== activeBlock"
+  >
+    <ion-col size="12">
+      <video #player preload="auto" playsinline loop>
+        <source [src]="block.video + '#t=0.5'" type="video/mp4" />
+      </video>
+    </ion-col>
+    <ion-col size="3" offset="6">
+      <div class="action-btn">
+        <ion-icon name="notifications-outline"></ion-icon>
+        Remind me
+      </div>
+    </ion-col>
+    <ion-col size="3">
+      <div class="action-btn">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Info
+      </div>
+    </ion-col>
+    <ion-col size="12" class="desc">
+      <p>{{ block.date }}</p>
+      <b>{{ block.title }}</b><br />
+      <p>{{ block.desc }}</p>
+      <span class="tag" *ngFor="let tag of block.tags">{{ tag }}</span>
+    </ion-col>
+  </ion-row>
 </ion-content>
