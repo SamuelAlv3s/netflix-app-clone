@@ -41,6 +41,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'home/details/:id',
+        loadChildren: () =>
+          import('../pages/details/details.module').then(
+            (m) => m.DetailsPageModule
+          ),
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full',

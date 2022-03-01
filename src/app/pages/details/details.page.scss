@@ -1,0 +1,42 @@
+ion-toolbar {
+  --padding-bottom: 0;
+}
+.img-account {
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.fixed-block {
+  position: fixed;
+  left: 0;
+  top: 56px;
+  width: 100%;
+  height: 180px;
+  background: #000;
+  z-index: 10;
+}
+
+video {
+  width: 100%;
+}
+
+ion-content {
+  --padding-top: 236px;
+}
+
+.spotlight-btn {
+  font-family: NetflixSansRegular;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  &::part(native) {
+    border-radius: 4px;
+  }
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

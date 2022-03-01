@@ -69,11 +69,15 @@
         <img
           *ngIf="section.type !== 'continue'"
           [src]="'./assets/data/'+section.type+'-'+series.id+'.jpg'"
+          [routerLink]="['details', series.id]"
         />
 
         <!-- custom visuals for the continue section with controls -->
         <div class="continue" *ngIf="section.type === 'continue'">
-          <img [src]="'./assets/data/'+section.type+'-'+series.id+'.jpg'" />
+          <img
+            [src]="'./assets/data/'+section.type+'-'+series.id+'.jpg'"
+            [routerLink]="['details', series.id]"
+          />
           <div class="progress-bar">
             <div class="progress" [style.width]="series.progress +'%'"></div>
           </div>
