@@ -1,9 +1,41 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>downloads</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title mode="md">Downloads</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">
+        <ion-icon name="logo-rss"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <img class="img-account" src="./assets/img/account.png" />
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-row>
+    <ion-col offset="8" size="4" class="ion-text-right">
+      <ion-button fill="clear" (click)="toggleEdit()">
+        <ion-icon name="pencil" color="light" size="large"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let block of downloads" class="downloads">
+      <ion-item>
+        <img [src]="block.img" slot="start" />
+        <ion-label>
+          {{ block.title }}<br />
+          <span class="info">12 | 1 Episode | 103,9 MB<br /></span>
+          <span class="expire">Expires on 09/21</span>
+        </ion-label>
+        <ion-icon slot="end" name="chevron-forward"></ion-icon>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="removeItem(block)" color="primary">
+          <ion-icon name="close"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

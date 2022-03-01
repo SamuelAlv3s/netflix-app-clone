@@ -1,0 +1,35 @@
+.img-account {
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+ion-title {
+  font-family: NetflixSansBold;
+  font-size: x-large;
+}
+.downloads {
+  margin-bottom: 4px;
+  img {
+    width: 130px;
+    border-radius: 4px;
+  }
+  ion-icon {
+    font-size: 32px;
+  }
+  ion-label {
+    font-size: small;
+    font-weight: 600;
+  }
+  .info {
+    color: var(--ion-color-medium);
+    font-size: smaller;
+  }
+  .expire {
+    color: #d0501f;
+    font-size: smaller;
+  }
+}
+ion-item::part(native) {
+  padding-inline-start: 12px;
+}
