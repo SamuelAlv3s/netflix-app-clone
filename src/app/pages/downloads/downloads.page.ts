@@ -28,6 +28,6 @@ export class DownloadsPage implements OnInit {
   }
 
   removeItem(item) {
-    this.downloads = this.downloads.filter((elem) => elem.id === item.id);
+    this.downloads = this.downloads.filter((elem) => elem.id !== item.id);
   }
 }
