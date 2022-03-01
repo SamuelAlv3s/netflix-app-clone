@@ -8,10 +8,10 @@ export const modalEnterAnimation = (
   baseEl: HTMLElement,
   presentingEl?: HTMLElement
 ): Animation => {
-  const root = baseEl.shadowRoot;
+  const root = baseEl;
 
   const backdropAnimation = createAnimation()
-    .addElement(root.querySelector('ion-backdrop'))
+    .addElement(root.shadowRoot.querySelector('ion-backdrop'))
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
     .beforeStyles({
       'pointer-events': 'none',
@@ -19,7 +19,9 @@ export const modalEnterAnimation = (
     .afterClearStyles(['pointer-events']);
 
   const wrapperAnimation = createAnimation()
-    .addElement(root.querySelectorAll('.modal-wrapper, .modal-shadow'))
+    .addElement(
+      root.shadowRoot.querySelectorAll('.modal-wrapper, .modal-shadow')
+    )
     .fromTo('opacity', 0, 1)
     .beforeStyles({ opacity: 0, transform: 'translateY(0)' });
 
@@ -44,11 +46,13 @@ export const modalLeaveAnimation = (
   const root = baseEl;
 
   const backdropAnimation = createAnimation()
-    .addElement(root.querySelector('ion-backdrop'))
+    .addElement(root.shadowRoot.querySelector('ion-backdrop'))
     .fromTo('opacity', 'var(--backdrop-opacity)', 0.0);
 
   const wrapperAnimation = createAnimation()
-    .addElement(root.querySelectorAll('.modal-wrapper, .modal-shadow'))
+    .addElement(
+      root.shadowRoot.querySelectorAll('.modal-wrapper, .modal-shadow')
+    )
     .fromTo('opacity', 1, 0)
     .beforeStyles({ opacity: 0 });
 
