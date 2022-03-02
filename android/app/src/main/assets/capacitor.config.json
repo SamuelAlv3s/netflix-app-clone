@@ -5,7 +5,12 @@
 	"bundledWebRuntime": false,
 	"plugins": {
 		"SplashScreen": {
-			"launchAutoHide": false
+			"launchAutoHide": false,
+			"showSpinner": true,
+			"androidSpinnerStyle": "inverse",
+			"iosSpinnerStyle": "small",
+			"spinnerColor": "#df0711",
+			"androidScaleType": "FIT_XY"
 		}
 	}
 }
