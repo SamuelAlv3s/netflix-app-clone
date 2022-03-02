@@ -4,7 +4,12 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'netflix',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+    },
+  },
 };
 
 export default config;
