@@ -7,7 +7,7 @@
 <p align="center">
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-installation">Installation</a>
 </p>
 
@@ -63,7 +63,7 @@ SSH URLs provide access to a Git repository via SSH, a secure protocol. If you h
 
 ### 🏃 Getting Started
 
-#### Web
+#### Web (active the device emulator - f12)
 
 `ionic serve`
 
