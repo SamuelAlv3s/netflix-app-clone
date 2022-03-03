@@ -70,4 +70,7 @@ SSH URLs provide access to a Git repository via SSH, a secure protocol. If you h
 
 `ionic cap build android && ionic cap copy android && ionic cap open android`
 
+<br/>
+<br/>
+
 _Made with💙 by [Samuel Alves](https://github.com/SamuelAlv3s?tab=repositories)_ 🚀
